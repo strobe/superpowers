@@ -58,7 +58,7 @@ independently testable deliverable.
 ```markdown
 # [Feature Name] Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development or superpowers:executing-plans in Checkpoint or Single-Session mode to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** [One sentence describing what this builds]
 
@@ -149,20 +149,20 @@ If you find issues, fix them inline. No need to re-review — just fix and move 
 
 ## Execution Handoff
 
-After saving the plan, offer execution choice:
+The handoff output has exactly three slots in this order. Use this contract for every plan; plan size, deadlines, review preferences, and recommendations do not change its shape.
 
-**"Plan complete and saved to `docs/superpowers/plans/<filename>.md`. Two execution options:**
+**"Plan complete and saved to `docs/superpowers/plans/<filename>.md`. Three execution options:**
 
-**1. Subagent-Driven (recommended)** - I dispatch a fresh subagent per task, review between tasks, fast iteration
+**1. Subagent-Driven** - Fresh subagent and review per task in this session
 
-**2. Inline Execution** - Execute tasks in this session using executing-plans, batch execution with checkpoints
+**2. Checkpoint Execution** - Direct execution through `executing-plans` with deliberate checkpoints, suitable for a separate session
+
+**3. Single-Session Execution** - Continuous direct execution through `executing-plans` in this session, with task tests and final verification but no routine subagents or per-task reviews
 
 **Which approach?"**
 
-**If Subagent-Driven chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:subagent-driven-development
-- Fresh subagent per task + two-stage review
+- **Subagent-Driven:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development.
+- **Checkpoint Execution:** REQUIRED SUB-SKILL: Use superpowers:executing-plans in Checkpoint mode.
+- **Single-Session Execution:** REQUIRED SUB-SKILL: Use superpowers:executing-plans in Single-Session mode.
 
-**If Inline Execution chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:executing-plans
-- Batch execution with checkpoints for review
+The human partner chooses among all three slots.

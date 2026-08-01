@@ -29,6 +29,7 @@ When multiple skills apply, process skills come first — they set the approach,
 
 - "Let's build X" → superpowers:brainstorming first, then implementation skills.
 - "Fix this bug" → superpowers:systematic-debugging first, then domain skills.
+- Written plan execution → invoke the human partner's selected execution path: superpowers:subagent-driven-development, superpowers:executing-plans Checkpoint mode, or superpowers:executing-plans Single-Session mode. using-superpowers routes to that skill; it is not the execution skill.
 
 ## Red Flags
 

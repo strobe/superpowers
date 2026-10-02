@@ -1,5 +1,7 @@
 # Single-Session Execution Design
 
+> Historical design record. The v6.4.2 upstream merge retains only Single-Session direct execution; Checkpoint execution and the three-option handoff below are superseded. The current skills offer Subagent-Driven or Single-Session, preserve a supplied selection, and require plan review before implementation.
+
 ## Problem
 
 The current implementation-plan handoff offers subagent-driven development or inline execution through `executing-plans`. For small features, both paths can impose disproportionate process overhead through strict test-first sequencing, repeated checkpoints, and review gates.

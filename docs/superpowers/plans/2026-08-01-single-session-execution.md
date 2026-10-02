@@ -1,5 +1,7 @@
 # Single-Session Execution Implementation Plan
 
+> Historical implementation record, not a plan to execute again. The v6.4.2 upstream merge retires Checkpoint execution and retains only Single-Session direct execution alongside Subagent-Driven. Consult the current skills for the two-option handoff and plan-review gate.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development or superpowers:executing-plans in Checkpoint or Single-Session mode to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Add a user-selectable Single-Session mode that executes an approved written plan directly with task tests and final verification but without routine subagents or review gates.
